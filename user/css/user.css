@@ -1,0 +1,189 @@
+/*
+   Author: Pham Hai Trieu
+   Theme: Data Management
+   Version: 1.0
+*/
+*{
+   margin: 0 0;
+   padding: 0 0;
+   font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+   /* border: 1px solid red; */
+   width: 80%;
+   margin: 0 auto;
+   padding: 10px;
+}
+.big-text {
+   text-align: center;
+   font-size: 40px;
+   font-weight: bold;
+}
+.container  .toprightbtn{
+   text-decoration: none; font-weight: bold; border-radius: 7px;
+   background-color: #c6f4ff;
+   border: 1px solid rgb(214, 214, 214);
+   color: black;
+   padding: 10px 15px;
+   text-align: center;
+   vertical-align: middle;
+   font-size: 20px;
+   position: relative;
+   left: 92%;
+}
+.container  .toprightbtn:hover {
+   background-color: blue;
+   cursor: pointer;
+   color: white;
+}
+
+
+/* CSS for navbar */
+.nav {
+   display: flex;
+   justify-content: space-between;
+}
+.sitename {
+   width: 20%;
+   position: relative;
+   left: 40%;
+}
+.menu-bar {
+   position: relative;
+   left: 92%;
+   width: 20%;
+   text-align: right;
+   font-size: 16px;
+}
+.menu-bar li {
+   display: inline-block;
+   text-decoration: none;
+   padding: 5px 10px;
+   background-color: rgb(234, 239, 255);
+   border-radius: 4px;
+}
+.menu-bar li:hover {
+   background-color: rgb(102, 137, 252);
+}
+.menu-bar a {
+   color: black;
+   text-decoration: none;
+}
+
+
+/* CSS for footer */
+.footer-txt {
+   text-align: center;
+   font-size: 12;
+}
+.footer {
+   background-color: #a8dfec;
+}
+
+
+/*CSS for table section*/
+.table-caption {
+   font-size: 20px;
+   font-weight: bold;
+}
+.admin-table{
+   width: 100%;
+   table-layout: auto;
+}
+.admin-table th, .admin-table td{
+   padding: 5px;
+}
+.admin-table tr:nth-child(1){                    /*Header config*/
+   background-color: rgb(207, 207, 207);
+}
+.admin-table, .admin-table th, .admin-table td{    /*All border config*/
+   border: 1px solid #000;
+   border-collapse: collapse;
+}
+
+.admin-table tr td:nth-child(1){                 /*ID column config*/
+   width: 5%;
+   text-align: center;
+   vertical-align: middle;
+}
+.admin-table tr td:nth-child(2){                 /*Thumbnail column config*/
+   width: 20%;
+   text-align: center;
+   vertical-align: middle;
+}
+.admin-table tr td:nth-child(3){                 /*Title column config*/
+   width: 45%;
+   text-align: left;     
+   vertical-align: top;
+}
+.admin-table tr td:nth-child(4){                 /*Status column config*/
+   width: 10%;
+   text-align: center;     
+   vertical-align: top;
+}
+.admin-table tr td:nth-child(5){                 /*Action column config*/
+   width: 20%;
+   text-align: left;     
+   vertical-align: top;
+}
+
+
+/* CSS for page changer section */
+.num-of-obj {
+   width: 12%;
+   margin: 0 0 0 10px;
+}
+.num-of-obj span, .num-of-obj select{
+   font-size: 18px;
+   width: 60px;
+}
+.pagination {
+   width: 100%;
+   height: 30px;
+   margin: 0 auto 0 auto;
+}
+.pagination table {
+   margin: auto;
+}
+.pagination table, .pagination td {   
+   border: 1px solid black;
+   border-collapse: collapse;
+   padding: 3px 8px;
+}
+
+
+/* CSS for show-object page */
+.show-object {
+   width: 100%;
+   table-layout: auto;
+}
+.show-object th, .show-object td{
+   padding: 5px;
+}
+.show-object .title-cell{                    /*Title config*/
+   background-color: rgb(236, 236, 236);
+   text-align: left;
+   padding: 5px 0 5px 15px;
+   font-size: 40px;
+   font-weight: bold;
+}
+.show-object, .show-object th, .show-object td{    /*All border config*/
+   border: 0.5px solid #000;
+   border-collapse: collapse;
+}
+
+.show-object .image-cell{                 /*Image cell config*/
+   width: 30%;
+   text-align: center;
+   vertical-align: middle;
+}
+.show-object .description-cell{          /*Description cell config*/
+   width: 70%;
+   text-align: left;
+   vertical-align: top;
+   font-size: 25px;
+}
+
+.red-text {
+   color: red;
+}
