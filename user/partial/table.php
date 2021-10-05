@@ -10,7 +10,7 @@
          <?php
             session_start();
             // Count number of rows
-            $sql = "SELECT * FROM table01";
+            $sql = "SELECT * FROM table01 WHERE status='1'";
             $res = mysqli_query($conn, $sql) or die('Error: '.mysqli_error($conn));
             $count_all = mysqli_num_rows($res);
             
@@ -39,6 +39,7 @@
             {
                // Count rows (also to check if table has data)
                $count = mysqli_num_rows($res);   //Function to get all rows in database
+               
 
                if($count>0)
                {// Has data
@@ -47,6 +48,7 @@
                   {
                      //If there's still data, the code will continue to fetch
                      $status = $row['status'];
+                     echo $count;
                      if ($status==1){
                         $id = $row['id'];
                         $title = $row['title'];
@@ -74,6 +76,8 @@
                               <td><?php if($status==1){echo $title;} ?></td>
                            </tr>
                         <?php
+                     } else {
+                        continue;
                      }
                   }
                }
