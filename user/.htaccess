@@ -1,0 +1,14 @@
+# Turn rewrite engine on
+RewriteEngine on
+
+# NC makes the rule non case sensitive
+# L makes this the last rule that this specific condition will be
+
+# Rewrite for user.php********
+RewriteRule ^id/([0-9]+) show-object.php?id=$1 [NC,L]
+
+RewriteRule ^add add-object.php [NC,L]
+
+RewriteRule ^main/([0-9]+) index.php?page=$1 [NC,L]
+
+RewriteRule ^edit/([0-9]+) edit-object.php?id=$1 [NC,L]
