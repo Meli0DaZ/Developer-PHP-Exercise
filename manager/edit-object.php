@@ -22,7 +22,7 @@
          Show
       </a>
 
-      <a href="index.php" class="add-new toprightbtn">
+      <a href="<?php echo SITEURL;?>/manager/index.php" class="add-new toprightbtn">
          Back
       </a>
    </div>
@@ -74,7 +74,8 @@
                <tr>
                   <td>Image:</td>
                   <td>
-                     <input type="file" name="image" value="Image = none">
+                  <input type="file" name="image" id="image" style="display: none;">
+                     <label for="image"><span class="img-btn-txt">Choose your image</span></label><span class="img-name-txt"><?php echo $image ?></span>
                   </td>
                </tr>
                <tr>
@@ -137,7 +138,7 @@
                }
                else
                {
-                  $image='';
+                  $image=$image;
                }
                if(isset($_POST['status']))
                {
