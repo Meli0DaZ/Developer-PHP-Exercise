@@ -19,7 +19,13 @@
             
             // Determine data per page and number of pages
             include('change_sm.php');
-            $object_per_page =  $_SESSION['num_page'];
+            if (isset($_SESSION['num_page'])){
+               $object_per_page =  $_SESSION['num_page'];
+            } else {
+               $object_per_page = 5;
+               $_SESSION['num_page'] = 5;
+            }
+            
             // echo $object_per_page;
             
             $num_of_page = ceil($count_all/$object_per_page);
