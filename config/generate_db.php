@@ -21,11 +21,11 @@ if ($connection->connect_error) {
 // Create database
 $sql_cmd = "CREATE DATABASE $db_name";
 $res = mysqli_query($connection,$sql_cmd);
-if ($res == TRUE) {
-  echo "Database created successfully";
-} else {
-  echo $connection->error.'. ';
-}
+// if ($res == TRUE) {
+//   echo "Database created successfully";
+// } else {
+//   echo $connection->error.'. ';
+// }
 
 // Create table
 $db_select = mysqli_select_db($connection,$db_name) or die('Error: '.mysqli_error($connection));
@@ -40,11 +40,11 @@ $sql_cmd = "CREATE TABLE $table_name (
       )";
    
 $res = mysqli_query($connection,$sql_cmd);
-if ($res == TRUE) {
-   echo "Database created successfully";
-} else {
-   echo $connection->error;
-}
+// if ($res == TRUE) {
+//    echo "Database created successfully";
+// } else {
+//    echo $connection->error;
+// }
 
 $connection->close();
 ?>
