@@ -73,9 +73,18 @@
                </tr>
                <tr>
                   <td>Image:</td>
-                  <td>
-                  <input type="file" name="image" id="image" style="display: none;">
-                     <label for="image"><span class="img-btn-txt">Choose your image</span></label><span class="img-name-txt"><?php echo $image ?></span>
+                  <td class="img-cell">
+                     <div class="tbl-block">
+                        <input type="file" name="image" id="image" style="display: none;">
+                        <label for="image"><span class="img-btn-txt">Choose your image</span></label>
+                     </div>
+                     <?php
+                        if($image){
+                           echo '<img class="img-style" src="'.SITEURL.'/img/'.$image.'" width="80px">';
+                        } else{
+                           echo '<span class="img-name-txt">No image</span>';
+                        }
+                     ?>
                   </td>
                </tr>
                <tr>
