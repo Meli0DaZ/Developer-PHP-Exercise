@@ -9,9 +9,9 @@
       <form action="" method="POST">
          <select name="obj-per-page" onchange="this.form.submit()">
             <option value="5" <?php if (isset($_SESSION['num_page']) && $_SESSION['num_page']=="5") echo "selected";?>>5</option>
-            <option value="7" <?php if (isset($_SESSION['num_page']) && $_SESSION['num_page']=="7") echo "selected";?>>7</option>
-            <option value="25" <?php if (isset($_SESSION['num_page']) && $_SESSION['num_page']=="25") echo "selected";?>>25</option>
-            <option value="50" <?php if (isset($_SESSION['num_page']) && $_SESSION['num_page']=="50") echo "selected";?>>50</option>
+            <option value="10" <?php if (isset($_SESSION['num_page']) && $_SESSION['num_page']=="10") echo "selected";?>>10</option>
+            <option value="15" <?php if (isset($_SESSION['num_page']) && $_SESSION['num_page']=="15") echo "selected";?>>15</option>
+            <option value="20" <?php if (isset($_SESSION['num_page']) && $_SESSION['num_page']=="20") echo "selected";?>>20</option>
          </select>      
       </form>
       <?php 
