@@ -31,7 +31,8 @@
                <tr>
                   <td>Image:</td>
                   <td>
-                     <input type="file" name="image">
+                     <input type="file" name="image" id="image" style="display: none;">
+                     <label for="image"><span class="img-btn-txt">Choose your image</span></label><span class="img-name-txt">No file chosen.</span>
                   </td>
                </tr>
                <tr>
@@ -112,15 +113,26 @@
 
                if($res==TRUE)
                {
-                  echo "Success";
+                  echo  '<script type="text/javascript">',
+                        'successNoti();',
+                        '</script>';
                }
                else{
-                  echo "Failed";
+                  echo  '<script type="text/javascript">',
+                        'failNoti();',
+                        '</script>';
                }
             }
          ?>
    </div>
 
 </section>
-
+<script>
+   function successNoti() {
+      alert("Success.");
+      }
+   function failNoti() {
+      alert("Failed.");
+      }
+</script>
 <?php include('partial/footer.php') ?>
